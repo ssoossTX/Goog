@@ -55,14 +55,14 @@ export default function ClassSelection({ onClassSelected }) {
   // Отображение экрана выбора обычного класса
   if (!showMergedSelection) {
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-        <div className="bg-[#2D3748] rounded-lg p-6 max-w-4xl w-full mx-4 relative">
-          <h2 className="font-['Press_Start_2P,_cursive'] text-2xl text-center text-[#D69E2E] mb-6">Выберите ваш класс</h2>
-          <p className="text-center mb-8">Ваш выбор определит ваши особые способности в игре</p>
+      <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-2">
+        <div className="bg-[#2D3748] rounded-lg p-4 sm:p-6 max-w-4xl w-full relative">
+          <h2 className="font-['Press_Start_2P,_cursive'] text-xl sm:text-2xl text-center text-[#D69E2E] mb-3 sm:mb-6">Выберите класс</h2>
+          <p className="text-center text-sm sm:text-base mb-4 sm:mb-8">Ваш выбор определит ваши особые способности в игре</p>
           
           {/* Кнопка прокрутки вверх */}
           <button 
-            className="absolute top-4 right-4 w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
+            className="absolute top-4 right-4 w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
             onClick={scrollUp}
           >
             <i className="fas fa-chevron-up"></i>
@@ -70,7 +70,7 @@ export default function ClassSelection({ onClassSelected }) {
           
           {/* Кнопка прокрутки вниз */}
           <button 
-            className="absolute bottom-4 right-4 w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
+            className="absolute bottom-4 right-4 w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
             onClick={scrollDown}
           >
             <i className="fas fa-chevron-down"></i>
@@ -149,14 +149,14 @@ export default function ClassSelection({ onClassSelected }) {
 
   // Отображение экрана слияния классов
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-      <div className="bg-[#2D3748] rounded-lg p-6 max-w-4xl w-full mx-4 relative">
-        <h2 className="font-['Press_Start_2P,_cursive'] text-2xl text-center text-[#D69E2E] mb-6">Слияние классов</h2>
-        <p className="text-center mb-8">Выберите два класса, чтобы создать уникальный гибрид с комбинированными способностями</p>
+    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-2">
+      <div className="bg-[#2D3748] rounded-lg p-4 sm:p-6 max-w-4xl w-full relative">
+        <h2 className="font-['Press_Start_2P,_cursive'] text-lg sm:text-2xl text-center text-[#D69E2E] mb-3 sm:mb-6">Слияние классов</h2>
+        <p className="text-center text-sm sm:text-base mb-4 sm:mb-8">Выберите два класса, чтобы создать уникальный гибрид с комбинированными способностями</p>
         
         {/* Кнопка прокрутки вверх */}
         <button 
-          className="absolute top-4 right-4 w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
+          className="absolute top-4 right-4 w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
           onClick={scrollUp}
         >
           <i className="fas fa-chevron-up"></i>
@@ -164,7 +164,7 @@ export default function ClassSelection({ onClassSelected }) {
         
         {/* Кнопка прокрутки вниз */}
         <button 
-          className="absolute bottom-4 right-4 w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
+          className="absolute bottom-4 right-4 w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors z-10"
           onClick={scrollDown}
         >
           <i className="fas fa-chevron-down"></i>
@@ -232,30 +232,30 @@ export default function ClassSelection({ onClassSelected }) {
             <>
               <div className="mb-6 bg-[#1A202C] p-4 rounded-lg">
                 <h3 className="text-center text-xl mb-4">Слияние классов</h3>
-                <div className="flex items-center justify-center space-x-6">
+                <div className="flex flex-wrap justify-center items-center space-x-2 sm:space-x-6">
                   <div className="text-center">
-                    <div className={`w-16 h-16 rounded-full bg-class-${selectedClass} flex items-center justify-center mx-auto mb-2`}>
-                      <i className={`fas fa-${classes.find(c => c.id === selectedClass)?.icon} text-2xl`}></i>
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-class-${selectedClass} flex items-center justify-center mx-auto mb-1 sm:mb-2`}>
+                      <i className={`fas fa-${classes.find(c => c.id === selectedClass)?.icon} text-xl sm:text-2xl`}></i>
                     </div>
-                    <p>{classes.find(c => c.id === selectedClass)?.name}</p>
+                    <p className="text-xs sm:text-base">{classes.find(c => c.id === selectedClass)?.name}</p>
                   </div>
                   
-                  <div className="text-2xl">+</div>
+                  <div className="text-lg sm:text-2xl">+</div>
                   
                   <div className="text-center">
-                    <div className={`w-16 h-16 rounded-full bg-class-${selectedMergedClass} flex items-center justify-center mx-auto mb-2`}>
-                      <i className={`fas fa-${classes.find(c => c.id === selectedMergedClass)?.icon} text-2xl`}></i>
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-class-${selectedMergedClass} flex items-center justify-center mx-auto mb-1 sm:mb-2`}>
+                      <i className={`fas fa-${classes.find(c => c.id === selectedMergedClass)?.icon} text-xl sm:text-2xl`}></i>
                     </div>
-                    <p>{classes.find(c => c.id === selectedMergedClass)?.name}</p>
+                    <p className="text-xs sm:text-base">{classes.find(c => c.id === selectedMergedClass)?.name}</p>
                   </div>
                   
-                  <div className="text-2xl">=</div>
+                  <div className="text-lg sm:text-2xl">=</div>
                   
                   <div className="text-center">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-r from-${selectedClass === 'warrior' ? 'red-300' : selectedClass === 'mage' ? 'blue-300' : selectedClass === 'explorer' ? 'green-300' : selectedClass === 'merchant' ? 'yellow-300' : 'purple-300'} to-${selectedMergedClass === 'warrior' ? 'red-300' : selectedMergedClass === 'mage' ? 'blue-300' : selectedMergedClass === 'explorer' ? 'green-300' : selectedMergedClass === 'merchant' ? 'yellow-300' : 'purple-300'} flex items-center justify-center mx-auto mb-2`}>
-                      <i className="fas fa-star text-2xl"></i>
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-${selectedClass === 'warrior' ? 'red-300' : selectedClass === 'mage' ? 'blue-300' : selectedClass === 'explorer' ? 'green-300' : selectedClass === 'merchant' ? 'yellow-300' : 'purple-300'} to-${selectedMergedClass === 'warrior' ? 'red-300' : selectedMergedClass === 'mage' ? 'blue-300' : selectedMergedClass === 'explorer' ? 'green-300' : selectedMergedClass === 'merchant' ? 'yellow-300' : 'purple-300'} flex items-center justify-center mx-auto mb-1 sm:mb-2`}>
+                      <i className="fas fa-star text-xl sm:text-2xl"></i>
                     </div>
-                    <p>{getMergedClassBonuses(selectedClass, selectedMergedClass).name}</p>
+                    <p className="text-xs sm:text-base">{getMergedClassBonuses(selectedClass, selectedMergedClass).name}</p>
                   </div>
                 </div>
                 

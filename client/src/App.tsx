@@ -85,48 +85,94 @@ function App() {
 
         {/* Основной контент */}
         <main className="flex-grow container mx-auto p-4">
-          {/* Верхняя навигация по вкладкам */}
-          <div className="flex justify-between items-center border-b border-gray-700 mb-6">
-            <div className="flex">
-              <div 
-                className={`tab px-4 py-2 cursor-pointer ${activeTab === 'clicker' ? 'tab-active border-b-3 border-[#6B46C1] text-white' : ''}`} 
-                onClick={() => setActiveTab('clicker')}
-              >
-                Кликер
-              </div>
-              <div 
-                className={`tab px-4 py-2 cursor-pointer ${activeTab === 'map' ? 'tab-active border-b-3 border-[#6B46C1] text-white' : ''}`}
-                onClick={() => setActiveTab('map')}
-              >
-                Карта
-              </div>
-              <div 
-                className={`tab px-4 py-2 cursor-pointer ${activeTab === 'dungeon' ? 'tab-active border-b-3 border-[#6B46C1] text-white' : ''}`}
-                onClick={() => setActiveTab('dungeon')}
-              >
-                Подземелья
-              </div>
-              <div 
-                className={`tab px-4 py-2 cursor-pointer ${activeTab === 'shop' ? 'tab-active border-b-3 border-[#6B46C1] text-white' : ''}`}
-                onClick={() => setActiveTab('shop')}
-              >
-                Магазин
-              </div>
-              <div 
-                className={`tab px-4 py-2 cursor-pointer ${activeTab === 'profile' ? 'tab-active border-b-3 border-[#6B46C1] text-white' : ''}`}
-                onClick={() => setActiveTab('profile')}
-              >
-                Профиль
-              </div>
-            </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <div className="bg-[#6B46C1] px-3 py-1 rounded-full">
+          {/* Информация о персонаже (адаптивная) */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 mb-4 pb-2">
+            <div className="flex items-center space-x-2 text-sm mb-3 sm:mb-0 w-full sm:w-auto">
+              <div className="bg-[#6B46C1] px-3 py-1.5 rounded-full">
                 <i className="fas fa-star mr-1 text-yellow-300"></i>
                 Уровень {player?.level || 0}
               </div>
-              <div className="bg-gray-700 px-3 py-1 rounded-full">
+              <div className="bg-gray-700 px-3 py-1.5 rounded-full">
                 <i className="fas fa-brain mr-1 text-blue-300"></i>
-                Очки навыков: {player?.skillPoints || 0}
+                Очки: {player?.skillPoints || 0}
+              </div>
+            </div>
+          </div>
+          
+          {/* Верхняя навигация по вкладкам - адаптивная */}
+          <div className="mb-6">
+            {/* Мобильная навигация */}
+            <div className="grid grid-cols-5 sm:hidden bg-[#2D3748] rounded-lg overflow-hidden">
+              <div 
+                className={`flex flex-col items-center justify-center p-2 text-xs cursor-pointer ${activeTab === 'clicker' ? 'bg-[#6B46C1] text-white' : 'hover:bg-gray-700'}`} 
+                onClick={() => setActiveTab('clicker')}
+              >
+                <i className="fas fa-mouse-pointer text-lg mb-1"></i>
+                <span>Кликер</span>
+              </div>
+              <div 
+                className={`flex flex-col items-center justify-center p-2 text-xs cursor-pointer ${activeTab === 'map' ? 'bg-[#6B46C1] text-white' : 'hover:bg-gray-700'}`}
+                onClick={() => setActiveTab('map')}
+              >
+                <i className="fas fa-map-marked-alt text-lg mb-1"></i>
+                <span>Карта</span>
+              </div>
+              <div 
+                className={`flex flex-col items-center justify-center p-2 text-xs cursor-pointer ${activeTab === 'dungeon' ? 'bg-[#6B46C1] text-white' : 'hover:bg-gray-700'}`}
+                onClick={() => setActiveTab('dungeon')}
+              >
+                <i className="fas fa-dungeon text-lg mb-1"></i>
+                <span>Данж</span>
+              </div>
+              <div 
+                className={`flex flex-col items-center justify-center p-2 text-xs cursor-pointer ${activeTab === 'shop' ? 'bg-[#6B46C1] text-white' : 'hover:bg-gray-700'}`}
+                onClick={() => setActiveTab('shop')}
+              >
+                <i className="fas fa-store text-lg mb-1"></i>
+                <span>Магазин</span>
+              </div>
+              <div 
+                className={`flex flex-col items-center justify-center p-2 text-xs cursor-pointer ${activeTab === 'profile' ? 'bg-[#6B46C1] text-white' : 'hover:bg-gray-700'}`}
+                onClick={() => setActiveTab('profile')}
+              >
+                <i className="fas fa-user text-lg mb-1"></i>
+                <span>Профиль</span>
+              </div>
+            </div>
+            
+            {/* Десктопная навигация */}
+            <div className="hidden sm:flex justify-between items-center">
+              <div className="flex border-b border-gray-700 w-full">
+                <div 
+                  className={`tab px-4 py-2 cursor-pointer ${activeTab === 'clicker' ? 'tab-active border-b-2 border-[#6B46C1] text-white' : ''}`} 
+                  onClick={() => setActiveTab('clicker')}
+                >
+                  <i className="fas fa-mouse-pointer mr-2"></i>Кликер
+                </div>
+                <div 
+                  className={`tab px-4 py-2 cursor-pointer ${activeTab === 'map' ? 'tab-active border-b-2 border-[#6B46C1] text-white' : ''}`}
+                  onClick={() => setActiveTab('map')}
+                >
+                  <i className="fas fa-map-marked-alt mr-2"></i>Карта
+                </div>
+                <div 
+                  className={`tab px-4 py-2 cursor-pointer ${activeTab === 'dungeon' ? 'tab-active border-b-2 border-[#6B46C1] text-white' : ''}`}
+                  onClick={() => setActiveTab('dungeon')}
+                >
+                  <i className="fas fa-dungeon mr-2"></i>Подземелья
+                </div>
+                <div 
+                  className={`tab px-4 py-2 cursor-pointer ${activeTab === 'shop' ? 'tab-active border-b-2 border-[#6B46C1] text-white' : ''}`}
+                  onClick={() => setActiveTab('shop')}
+                >
+                  <i className="fas fa-store mr-2"></i>Магазин
+                </div>
+                <div 
+                  className={`tab px-4 py-2 cursor-pointer ${activeTab === 'profile' ? 'tab-active border-b-2 border-[#6B46C1] text-white' : ''}`}
+                  onClick={() => setActiveTab('profile')}
+                >
+                  <i className="fas fa-user mr-2"></i>Профиль
+                </div>
               </div>
             </div>
           </div>
