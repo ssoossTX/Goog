@@ -252,7 +252,7 @@ export default function ClassSelection({ onClassSelected }) {
                   <div className="text-2xl">=</div>
                   
                   <div className="text-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-class-{selectedClass} to-class-{selectedMergedClass} flex items-center justify-center mx-auto mb-2">
+                    <div className={`w-16 h-16 rounded-full bg-gradient-to-r from-${selectedClass === 'warrior' ? 'red-300' : selectedClass === 'mage' ? 'blue-300' : selectedClass === 'explorer' ? 'green-300' : selectedClass === 'merchant' ? 'yellow-300' : 'purple-300'} to-${selectedMergedClass === 'warrior' ? 'red-300' : selectedMergedClass === 'mage' ? 'blue-300' : selectedMergedClass === 'explorer' ? 'green-300' : selectedMergedClass === 'merchant' ? 'yellow-300' : 'purple-300'} flex items-center justify-center mx-auto mb-2`}>
                       <i className="fas fa-star text-2xl"></i>
                     </div>
                     <p>{getMergedClassBonuses(selectedClass, selectedMergedClass).name}</p>
