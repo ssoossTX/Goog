@@ -32,11 +32,11 @@ export default function Header() {
           <div className="hidden sm:flex items-center space-x-4">
             <div className="flex items-center">
               <i className="fas fa-coins text-yellow-400 mr-2"></i>
-              <span className="font-semibold">{formatNumber(player.resources.gold)}</span>
+              <span className="font-semibold">{formatNumber(player.resources?.gold || 0)}</span>
             </div>
             <div className="flex items-center">
               <i className="fas fa-gem text-blue-400 mr-2"></i>
-              <span className="font-semibold">{formatNumber(player.resources.diamonds)}</span>
+              <span className="font-semibold">{formatNumber(player.resources?.diamonds || 0)}</span>
             </div>
             <div className="relative">
               <button id="settingsBtn" className="p-2 text-gray-300 hover:text-white transition">
@@ -49,11 +49,11 @@ export default function Header() {
           <div className="flex sm:hidden items-center space-x-3">
             <div className="flex items-center">
               <i className="fas fa-coins text-yellow-400 mr-1"></i>
-              <span className="font-semibold text-sm">{formatNumber(player.resources.gold)}</span>
+              <span className="font-semibold text-sm">{formatNumber(player.resources?.gold || 0)}</span>
             </div>
             <div className="flex items-center">
               <i className="fas fa-gem text-blue-400 mr-1"></i>
-              <span className="font-semibold text-sm">{formatNumber(player.resources.diamonds)}</span>
+              <span className="font-semibold text-sm">{formatNumber(player.resources?.diamonds || 0)}</span>
             </div>
             <button 
               className="p-2 text-gray-300 hover:text-white transition"
