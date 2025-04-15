@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Фоновый градиент -->
+  <rect width="800" height="500" fill="#1F2937"/>
+  
+  <!-- Земля -->
+  <path d="M0 250 Q 200 200, 400 250 Q 600 300, 800 250 V 500 H 0 Z" fill="#374151"/>
+  
+  <!-- Горы -->
+  <path d="M50 300 L 150 150 L 250 300 Z" fill="#4B5563" stroke="#6B7280"/>
+  <path d="M200 350 L 300 100 L 400 350 Z" fill="#4B5563" stroke="#6B7280"/>
+  <path d="M550 320 L 650 150 L 750 320 Z" fill="#4B5563" stroke="#6B7280"/>
+
+  <!-- Лес -->
+  <circle cx="150" cy="200" r="40" fill="#10B981"/>
+  <circle cx="180" cy="180" r="30" fill="#059669"/>
+  <circle cx="120" cy="190" r="35" fill="#059669"/>
+  
+  <circle cx="650" cy="200" r="35" fill="#10B981"/>
+  <circle cx="680" cy="180" r="25" fill="#059669"/>
+  <circle cx="620" cy="190" r="30" fill="#059669"/>
+  
+  <!-- Река -->
+  <path d="M300 0 Q 350 100, 400 150 Q 450 200, 500 350 Q 550 450, 600 500" stroke="#3B82F6" stroke-width="20" fill="none"/>
+  
+  <!-- Болото -->
+  <circle cx="500" cy="375" r="50" fill="#1E40AF" fill-opacity="0.5"/>
+  <circle cx="550" cy="400" r="40" fill="#1E40AF" fill-opacity="0.4"/>
+  <circle cx="475" cy="415" r="35" fill="#1E40AF" fill-opacity="0.3"/>
+  
+  <!-- Руины -->
+  <rect x="350" y="150" width="100" height="50" fill="#92400E" stroke="#78350F" stroke-width="2"/>
+  <rect x="370" y="120" width="20" height="30" fill="#92400E" stroke="#78350F" stroke-width="2"/>
+  <rect x="410" y="120" width="20" height="30" fill="#92400E" stroke="#78350F" stroke-width="2"/>
+  <rect x="375" y="170" width="50" height="30" fill="#92400E" stroke="#78350F" stroke-width="2"/>
+  
+  <!-- Вулкан -->
+  <path d="M700 400 L 750 300 L 800 400 Z" fill="#DC2626" stroke="#B91C1C" stroke-width="2"/>
+  <path d="M725 350 L 735 320 L 775 380 Z" fill="#F87171"/>
+  <circle cx="750" cy="310" r="10" fill="#FECACA"/>
+
+  <!-- Пещера -->
+  <path d="M100 400 Q 120 350, 150 375 Q 180 400, 200 375 Q 220 350, 240 400" fill="#1F2937" stroke="#111827" stroke-width="2"/>
+  
+  <!-- Сетка координат -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  
+  <line x1="100" y1="0" x2="100" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="300" y1="0" x2="300" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="500" y1="0" x2="500" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="700" y1="0" x2="700" y2="500" stroke="#4B5563" stroke-width="1" stroke-opacity="0.2"/>
+  
+  <!-- Компас -->
+  <circle cx="750" cy="50" r="30" fill="#4B5563" stroke="#6B7280" stroke-width="2"/>
+  <line x1="750" y1="20" x2="750" y2="80" stroke="#9CA3AF" stroke-width="2"/>
+  <line x1="720" y1="50" x2="780" y2="50" stroke="#9CA3AF" stroke-width="2"/>
+  <path d="M750 30 L 755 45 L 750 40 L 745 45 Z" fill="#EF4444"/>
+  
+  <!-- Граница карты -->
+  <rect x="0" y="0" width="800" height="500" stroke="#6B7280" stroke-width="4" fill="none"/>
+</svg>

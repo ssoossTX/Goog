@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="7" y="4" width="10" height="16" fill="#FC8181" stroke="#E53E3E"/>
+  <rect x="9" y="7" width="6" height="2" fill="#FED7D7" stroke="#E53E3E"/>
+  <rect x="9" y="11" width="6" height="2" fill="#FED7D7" stroke="#E53E3E"/>
+  <rect x="9" y="15" width="6" height="2" fill="#FED7D7" stroke="#E53E3E"/>
+  <path d="M5 20H19" stroke="#E53E3E"/>
+  <path d="M17 4L17 2" stroke="#E53E3E"/>
+  <path d="M14 4L14 3" stroke="#E53E3E"/>
+  <path d="M10 4L10 3" stroke="#E53E3E"/>
+  <path d="M7 4L7 2" stroke="#E53E3E"/>
+  <path d="M9 1L9 2" stroke="#E53E3E"/>
+  <path d="M15 1L15 2" stroke="#E53E3E"/>
+  <path d="M12 1L12.5 3" stroke="#E53E3E"/>
+  <path d="M8 21C6 23 5 22 5 20" fill="#FC8181" stroke="#E53E3E"/>
+  <path d="M16 21C18 23 19 22 19 20" fill="#FC8181" stroke="#E53E3E"/>
+  <path d="M12 21.5C10 23.5 9 22.5 9 20.5" fill="#FC8181" stroke="#E53E3E"/>
+  <path d="M12 21.5C14 23.5 15 22.5 15 20.5" fill="#FC8181" stroke="#E53E3E"/>
+</svg>

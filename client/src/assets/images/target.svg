@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" fill="none">
+  <!-- Внешний круг -->
+  <circle cx="96" cy="96" r="90" fill="#1A202C" stroke="#2D3748" stroke-width="4"/>
+  
+  <!-- Кольца мишени -->
+  <circle cx="96" cy="96" r="75" fill="none" stroke="#FC8181" stroke-width="4"/>
+  <circle cx="96" cy="96" r="60" fill="none" stroke="#F6AD55" stroke-width="4"/>
+  <circle cx="96" cy="96" r="45" fill="none" stroke="#F6E05E" stroke-width="4"/>
+  <circle cx="96" cy="96" r="30" fill="none" stroke="#68D391" stroke-width="4"/>
+  <circle cx="96" cy="96" r="15" fill="#F56565" stroke="#C53030" stroke-width="4"/>
+  
+  <!-- Линии поперек -->
+  <line x1="6" y1="96" x2="186" y2="96" stroke="#4A5568" stroke-width="2"/>
+  <line x1="96" y1="6" x2="96" y2="186" stroke="#4A5568" stroke-width="2"/>
+  
+  <!-- Диагональные линии -->
+  <line x1="26" y1="26" x2="166" y2="166" stroke="#4A5568" stroke-width="2"/>
+  <line x1="166" y1="26" x2="26" y2="166" stroke="#4A5568" stroke-width="2"/>
+  
+  <!-- Внешние декоративные элементы -->
+  <circle cx="36" cy="36" r="6" fill="#2D3748" stroke="#4A5568" stroke-width="2"/>
+  <circle cx="156" cy="36" r="6" fill="#2D3748" stroke="#4A5568" stroke-width="2"/>
+  <circle cx="36" cy="156" r="6" fill="#2D3748" stroke="#4A5568" stroke-width="2"/>
+  <circle cx="156" cy="156" r="6" fill="#2D3748" stroke="#4A5568" stroke-width="2"/>
+  
+  <!-- Центральный крест -->
+  <path d="M96 81 L96 111 M81 96 L111 96" stroke="#FFFFFF" stroke-width="3"/>
+  
+  <!-- Внутренняя точка -->
+  <circle cx="96" cy="96" r="3" fill="#FFFFFF"/>
+</svg>

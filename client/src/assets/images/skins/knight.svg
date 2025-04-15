@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Шлем -->
+  <path d="M35 30 Q 50 20, 65 30 L 65 60 Q 50 70, 35 60 Z" fill="#A0AEC0" stroke="#718096" stroke-width="2"/>
+  <path d="M45 30 Q 50 25, 55 30 L 55 35 Q 50 40, 45 35 Z" fill="#4A5568" stroke="#2D3748" stroke-width="1"/>
+  
+  <!-- Прорезь для глаз -->
+  <path d="M40 45 H 60" stroke="#2D3748" stroke-width="3"/>
+  
+  <!-- Туловище -->
+  <rect x="40" y="60" width="20" height="25" fill="#A0AEC0" stroke="#718096" stroke-width="2"/>
+  
+  <!-- Плечевые накладки -->
+  <path d="M40 62 Q 35 60, 30 65 Q 30 70, 35 75 L 40 75 Z" fill="#CBD5E0" stroke="#718096" stroke-width="1"/>
+  <path d="M60 62 Q 65 60, 70 65 Q 70 70, 65 75 L 60 75 Z" fill="#CBD5E0" stroke="#718096" stroke-width="1"/>
+  
+  <!-- Руки -->
+  <rect x="32" y="65" width="8" height="20" fill="#A0AEC0" stroke="#718096" stroke-width="1"/>
+  <rect x="60" y="65" width="8" height="20" fill="#A0AEC0" stroke="#718096" stroke-width="1"/>
+  
+  <!-- Ноги -->
+  <rect x="42" y="85" width="7" height="15" fill="#A0AEC0" stroke="#718096" stroke-width="1"/>
+  <rect x="51" y="85" width="7" height="15" fill="#A0AEC0" stroke="#718096" stroke-width="1"/>
+  
+  <!-- Меч -->
+  <rect x="70" y="50" width="5" height="30" fill="#718096" stroke="#4A5568" stroke-width="1"/>
+  <rect x="65" y="48" width="15" height="4" fill="#718096" stroke="#4A5568" stroke-width="1"/>
+  <path d="M70 38 L 75 48 L 65 48 Z" fill="#F6E05E" stroke="#D69E2E" stroke-width="1"/>
+  
+  <!-- Щит -->
+  <path d="M25 50 Q 25 70, 30 75 Q 35 80, 40 75 Q 35 70, 35 50 Z" fill="#2D3748" stroke="#1A202C" stroke-width="1"/>
+  <circle cx="30" cy="60" r="5" fill="#718096" stroke="#4A5568" stroke-width="1"/>
+  
+  <!-- Украшения -->
+  <rect x="47" y="65" width="6" height="10" fill="#F6E05E" stroke="#D69E2E" stroke-width="1"/>
+  <circle cx="50" cy="25" r="3" fill="#F6E05E" stroke="#D69E2E" stroke-width="1"/>
+</svg>
