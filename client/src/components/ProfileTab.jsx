@@ -379,6 +379,25 @@ export default function ProfileTab() {
           )}
         </div>
       </div>
+      
+      {/* Кнопка сброса игры */}
+      <div className="mt-6 lg:col-span-3">
+        <div className="bg-[#4C566A] rounded-lg shadow-lg p-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between border-t border-gray-700 pt-4">
+            <div className="text-sm text-gray-300 mb-3 sm:mb-0">
+              <i className="fas fa-exclamation-triangle text-red-400 mr-2"></i>
+              Опасная зона: Сброс игры удалит весь ваш прогресс, включая все предметы, навыки и достижения.
+            </div>
+            <button 
+              className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded transition text-sm"
+              onClick={handleResetGame}
+            >
+              <i className="fas fa-trash mr-2"></i>
+              Сбросить игру
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
