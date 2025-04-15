@@ -21,15 +21,9 @@ export default function ProfileTab() {
   // Функция сброса игры
   const handleResetGame = () => {
     if (confirm('Вы действительно хотите сбросить игру? Весь прогресс будет потерян!')) {
-      // Сохраняем только имя пользователя
-      const username = player.username;
-      // Сбрасываем состояние игрока до начального
-      const resetPlayer = {
-        ...initialPlayerState,
-        username: username
-      };
-      setPlayer(resetPlayer);
-      alert('Игра сброшена! Все прогресс потерян.');
+      // Полностью сбрасываем игрока, что вызовет показ экрана выбора класса
+      setPlayer(null);
+      alert('Игра сброшена! Выберите новый класс, чтобы начать игру заново.');
     }
   };
   
