@@ -40,7 +40,7 @@ export default function Header() {
             </div>
             <div className="relative">
               <button id="settingsBtn" className="p-2 text-gray-300 hover:text-white transition">
-                <i className="fas fa-cog"></i>
+                <i className="fas fa-cog text-white text-lg"></i>
               </button>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Header() {
               className="p-2 text-gray-300 hover:text-white transition"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
-              <i className={`fas ${showMobileMenu ? 'fa-times' : 'fa-cog'}`}></i>
+              <i className={`fas ${showMobileMenu ? 'fa-times' : 'fa-cog'} text-white text-lg`}></i>
             </button>
           </div>
         </div>
