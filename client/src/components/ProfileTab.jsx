@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useGame } from '../contexts/GameContext';
 import { formatNumber } from '../utils/gameUtils';
-import { skills as skillsData, artifacts, skins } from '../lib/gameData';
+import { skills as skillsData, artifacts, skins, initialPlayerState } from '../lib/gameData';
 import standardSkin from '../assets/images/skins/standard.svg';
 import knightSkin from '../assets/images/skins/knight.svg';
 import lockedSkin from '../assets/images/skins/locked.svg';
@@ -11,11 +11,27 @@ import ringIcon from '../assets/icons/artifacts/ring.svg';
 export default function ProfileTab() {
   const { player, setPlayer } = useGame();
   const [selectedTab, setSelectedTab] = useState('skills'); // 'skills' или 'artifacts'
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
   
   // Если игрок не инициализирован
   if (!player) {
     return <div className="text-center">Загрузка...</div>;
   }
+  
+  // Функция сброса игры
+  const handleResetGame = () => {
+    if (confirm('Вы действительно хотите сбросить игру? Весь прогресс будет потерян!')) {
+      // Сохраняем только имя пользователя
+      const username = player.username;
+      // Сбрасываем состояние игрока до начального
+      const resetPlayer = {
+        ...initialPlayerState,
+        username: username
+      };
+      setPlayer(resetPlayer);
+      alert('Игра сброшена! Все прогресс потерян.');
+    }
+  };
   
   // Обработчик улучшения навыка
   const handleUpgradeSkill = (skillId) => {
